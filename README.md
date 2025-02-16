@@ -3,7 +3,7 @@
 Welcome to the **Options Analyzer** project !   
 
 
-🔗 **Link to the GitHub project (version desktop)** : [Options Analyzer](https://github.com/AdRedrock/OptionsAnalyzer)  
+🔗 **Link to the GitHub project (desktop version)** : [Options Analyzer](https://github.com/AdRedrock/OptionsAnalyzer)  
 
 This README serves as **mini a documentation** to help those who wish to **understand the project** or **contribute to its development**.
 

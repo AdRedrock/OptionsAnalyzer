@@ -1,0 +1,10 @@
+{
+    "provider": "",
+    "market_place": "",
+    "option_ticker": "MLTX",
+    "underlying_ticker": "MLTX",
+    "change": "USD",
+    "quotation_type": "direct_quote",
+    "quotation_type_value": "",
+    "lot_size": "100"
+}

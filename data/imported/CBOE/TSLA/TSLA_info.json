@@ -1,0 +1,10 @@
+{
+    "provider": "",
+    "market_place": "",
+    "option_ticker": "TSLA",
+    "underlying_ticker": "TSLA",
+    "change": "USD",
+    "quotation_type": "direct_quote",
+    "quotation_type_value": "1",
+    "lot_size": "100"
+}

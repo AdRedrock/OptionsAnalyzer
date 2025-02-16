@@ -1,0 +1,10 @@
+{
+    "provider": "",
+    "market_place": "",
+    "option_ticker": "NDX",
+    "underlying_ticker": "^NDX",
+    "change": "USD",
+    "quotation_type": "points",
+    "quotation_type_value": "1",
+    "lot_size": "100"
+}

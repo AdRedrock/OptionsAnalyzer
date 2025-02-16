@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=42", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "options-analyzer"
+dynamic = ["version"]
+
+dependencies = [
+  "dash>=2.18.2",
+  "dash_ag_grid>=31.3.0",
+  "dash-bootstrap-components>=1.7.1",
+  "dask>=2025.1.0",
+  "pyarrow>=19.0.0",
+  "numpy>=2.2.2",
+  "pandas>=2.2.3",
+  "yfinance>=0.2.52",
+  "scipy>=1.14.1",
+  "PySide6>=6.8",
+  "setproctitle",
+]
+
+requires-python = ">=3.8"
+
+readme = "README.md"

@@ -1,93 +1,113 @@
-# 📈 Options Analyzer Project
+# 📈 Options Analyzer in a nutshell
 
-Welcome to the **Options Analyzer** project !   
+**Options Analyzer** is a Python-based software application, designed to analyze the options market. It is aimed at teachers, enthusiasts and individuals wishing to learn about these markets.
+
+Access to historical options market data is often **unavailable or expensive**. That's why I decided to create my own software, incorporating the **pre-designed analysis tools** I'm sharing with you today.
+
+With **Options Analyzer**, you can **create your own database** and **study the options market in greater depth** to better understand the issues.
+
+| ![](/screenshots/screenshot1.png) | ![](/screenshots/screenshot2.png) |
+|-----------------------------------|-----------------------------------|
+| ![](/screenshots/screenshot3.png) | ![](/screenshots/screenshot4.png) |
 
 
-🔗 **Link to the GitHub project (desktop version)** : [Options Analyzer](https://github.com/AdRedrock/OptionsAnalyzer)  
+# 🔍 Features
 
-This README serves as **mini a documentation** to help those who wish to **understand the project** or **contribute to its development**.
+✅ **Volume & Open Interest Analysis**  
+   - Visualize volume and OI by strike price  
+   - Identify expirations with the highest open interest and trading volume  
+   - Compare different imported datasets  
 
-💖 If you would like to support this project ☕, you can [buymeacoffee](https://buymeacoffee.com/adredrock)
+✅ **IV Indicators**  
+   - Compare **Implied Volatility (IV) vs. Realized Volatility**  
+   - Analyze **25-Delta Skew** & **Butterfly Delta Skew**  
+   - Generate **Volatility Smiles** with multiple data processing algorithms  
+   - Display **IV Surface**  
 
----
+✅ **Options Greeks**  
+   - **Gamma Exposure (GEX)**  
+   - **Delta Exposure (DEX)**  
+   - **Vanna Exposure (VEX)**  
+
+✅ **Options Payoff Analysis**  
+   - Model simple and complex strategies  
+   - Run **Monte Carlo simulations**  
+   - Display key statistics  
+
+✅ **Customizable Data Filtering**  
+   - Filter by **strike price, expiration date, moneyness,** and more!  
+
+All this while being able to apply filters such as strike range, expiration, moneyness, etc.
 
 # 🛠 Installation
 
-### 1️. Clone the repository :
- 
-   `git clone https://github.com/AdRedrock/options-analyzer-dev.git` 
+### ⚠ After conducting several tests on VirusTotal, it is recommended to disable or add an exception for ESET NOD and Ikarus antivirus software.
 
-### 2. Create the python environment :
-
-`python -m venv .env`. 
-
-### 3. Activate the environment :
-
-    (linux) source .env/bin/activate
-
-    (windows) .env\Scripts\activate
+1. **Download the installer** and run it.  
+2. **Follow the instructions** in the setup file.  
+3. Once installed, **run `OptionsAnalyzer.exe`**.   
 
 
-### 4. Once the environment is activated, run :
+✅ **Compatibility** : Windows 64-bits for now, all platforms from source code
 
-    pip install -e . 
 
-### 5. Launch the program :
+## ℹ General information
 
-#### 🌐 Web Version (Recommended for development)
+The payoff displayed is based solely on premiums and the price of the underlying at a given expiration, without taking into account the time evolution of options with different maturities.
+It is therefore not currently possible to study diagonal strategies.
 
-    python webapp.py
 
-   * Accessible by default at : https://127.0.0.1:8050
+### 📊 Select Expiration (Select Expiration drop-down lists)
 
-#### 🖥️ Desktop Version
+These are the types of selections -> All, Peak, Specific, Custom Selection
 
-     python OptionsAnalyzer.py
+| Option       | Description |
+|-------------|------------|
+| **All**     | Takes all deadlines into account. |
+| **Peak**    | Defines a maximum expiry. |
+| **Specific** | Select expiry one by one. |
+| **Custom Selection** | Allows you to choose your own pre-set options. |
 
-# Options Analyzer – Technical documentation
 
-## 📌 General Information and Project Structure
+# 👤 About me 
 
-Options Analyzer is a software application built with **Dash (Flask)**, integrating a **callbacks** system for dynamic interaction management.  
-The **desktop** version is a **web application embedded** in **PySide6**.
+🎓 I am a Master's student in Finance. Through this project, I wanted to pass on my passion for financial markets, trading and investing.
 
-### 📂 Project Structure
-- **`data/`** : Directory used to store imported data. The program loads this data for subsequent analysis.
-- **`src/analyzers/`** : Contains the scripts responsible for metrics, payoff calculation and data filtering.
-- **`src/gui/`** : Contains the Dash user interface and callbacks.
-- **`src/system/`** : Management of desktop features and import paths to avoid circular imports.
+💻 I'm not a **professional developer, just an enthusiast**, nor am I a financial professional or **mathematician/statistician**. 
 
-### 🌍 Time Zone Management
-- By default, data is **standardized to UTC+1**.
-- The program **dynamically converts** data according to the time zone selected by the user.
+⚠ Software limitations
 
----
+🔹 Certain **technical constraints** can affect the accuracy of calculations.
 
-## 📊 Indicator calculations
+🔹 Intraday data can only be imported for a maximum period of 60 days (Yahoo Finance limitation). 
 
-### 🔹 Data restrictions
-Certain constraints linked to data sources influence the calculation of indicators:
-- **IV vs Realized Volatility** :
-  - An **interpolation** is performed between the first maturity under 30 days and the first maturity over 30 days, to maximize asset coverage.
-  - **yFinance limitation**: Intraday candles are only available for 60 days**, which prevents accurate calculation of intraday volatility.
 
-### 🔹 Vanna calculation
-- The **risk-free interest rate** used to calculate options **is not provided by CBOE**.
-- The program uses the ticker **`^IRX` (13 Week Treasury Bill)**.
-- The risk-free rate is recalculated using the **Black-Scholes model**, **without accounting for dividends.**.
+# 💡 Contribute to the project
 
----
 
-If you have suggestions for optimizations, please let us know.
+✅ Would you like to contribute? Here are a few ideas:
 
----
+* Improve calculation methods, taking into account data limitations.
+* Add new indicators or features.
+* Create a new logo (graphic designers beware! 🎨).
+* Optimize the user interface to make it more intuitive.
 
-## 🛠 Contributions and Improvements
-If you would like to contribute :
-1. Fork the repository.
-2. Propose improvements and submit a **Pull Request**.
-3. If you have suggestions to optimize calculations, open an **Issue**.
+💖 Support me with a coffee ☕ : [buymeacoffee](https://buymeacoffee.com/adredrock)
 
----
+# 🚀 Future projects
 
-📜 **License** : _(Apache 2.0)_
+* Integrate more options markets (currently, only CBOE options are available).
+* Add options on futures, bonds and cryptocurrencies...
+* Implement diagonal strategy calculations.
+* Automate data import at a specific time for a specific market.
+* Implement an SQL database for improved data management.
+
+# ⚠ Disclaimer
+
+This is a free project. This means it relies on publicly available data.
+Consequently, some indicators, particularly in the “IV indicators” section, may not be suitable for less liquid assets, or for assets with option maturities that are too far apart.
+
+🔗 I invite you to read the doc inside the project to find out more about the calculation methods for each indicator and their limits.
+
+I am in no way responsible for your use of this software. This software is intended primarily for educational purposes.
+As such, I am in no way responsible for your analyses, or for your financial losses.

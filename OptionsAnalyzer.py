@@ -199,7 +199,8 @@ def connection():
     return localhost, available_port
 
 
-if __name__ == '__main__':
+
+def run():
 
     host, port = connection()
 
@@ -246,3 +247,6 @@ if __name__ == '__main__':
     finally:
         p.terminate()
         sys.exit(exit_code)
+
+if __name__ == '__main__':
+    run()

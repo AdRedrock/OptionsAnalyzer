@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+
 from dash import Dash, html, dcc, Input, State, Output
 import dash_bootstrap_components as dbc
 from src.gui.pages.sidebar import SideBar
@@ -107,5 +109,8 @@ def display_page(pathname):
     
     return styles
 
-if __name__ == '__main__':
+def run():
     app.run(debug=True)
+
+if __name__ == '__main__':
+    run()

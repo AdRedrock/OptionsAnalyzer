@@ -1,15 +1,16 @@
-[build-system]
-requires = ["setuptools>=42", "wheel"]
-build-backend = "setuptools.build_meta"
-
 [project]
 name = "options-analyzer"
-dynamic = ["version"]
+version = "1.1.0"
+description = "Options Analyzer is a Python-based software application, designed to analyze the options market. It is aimed at teachers, enthusiasts and individuals wishing to learn about these markets."
+authors = [
+    {name = "AdRedrock"}
+]
+readme = "README.md"
 
+requires-python = ">=3.10,<3.14"
 dependencies = [
   "dash>=2.18.2",
   "dash_ag_grid>=31.3.0",
-  "dash-bootstrap-components>=1.7.1",
   "dask>=2025.1.0",
   "pyarrow>=19.0.0",
   "numpy>=2.2.2",
@@ -18,8 +19,19 @@ dependencies = [
   "scipy>=1.14.1",
   "PySide6>=6.8",
   "setproctitle",
+  "dash-bootstrap-components (>=1.7.1,<2.0.0)"
 ]
 
-requires-python = ">=3.8"
+[tool.poetry]
+packages = [
+  {include = "webapp.py"},
+  {include = "*", from="src"}
+  ]
 
-readme = "README.md"
+[tool.poetry.scripts]
+options-analyzer-gui = "OptionsAnalyzer:run"
+options-analyzer-web = "webapp:run"
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"

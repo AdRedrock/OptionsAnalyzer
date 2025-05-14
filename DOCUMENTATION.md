@@ -13,36 +13,65 @@ This README serves as **mini a documentation** to help those who wish to **under
 
 # 🛠 Installation
 
-### 1️. Clone the repository :
- 
-   `git clone https://github.com/AdRedrock/options-analyzer-dev.git` 
+First thing is to get the sources:
 
-### 2. Create the python environment :
+```bash
+git clone https://github.com/AdRedrock/OptionsAnalyzer
+cd OptionsAnalyzer
+```
 
-`python -m venv .env`. 
+From there, two options:
 
-### 3. Activate the environment :
+## Install with poetry
 
-    (linux) source .env/bin/activate
+Ensure you have poetry installed, then install package locally:
+```bash
+poetry install
+```
 
-    (windows) .env\Scripts\activate
+Then run command:
+```bash
+# Run in desktop app
+options-analyzer-gui
 
+# Run in web browser
+options-analyzer-web
+```
 
-### 4. Once the environment is activated, run :
+Web ui should be available on [http://127.0.0.1:8050/](http://127.0.0.1:8050/).
 
-    pip install -e . 
+## With pip in development mode
 
-### 5. Launch the program :
+Create a new python environment:
 
-#### 🌐 Web Version (Recommended for development)
+```bash
+python -m venv .env
+``` 
 
-    python webapp.py
+Activate the virtual environment:
 
-   * Accessible by default at : https://127.0.0.1:8050
+```bash
+# Activate venv on linux
+source .env/bin/activate
 
-#### 🖥️ Desktop Version
+# Or activate venv on windows
+.env\Scripts\activate 
+```
 
-     python OptionsAnalyzer.py
+Install OptionsAnalyzer in development mode:
+
+```bash
+$ pip install -e . 
+```
+
+Launch the program:
+
+* 🌐 Web Version: `python webapp.py` 
+    * Recommended for development 
+    * accessible by default at: [http://127.0.0.1:8050](http://127.0.0.1:8050)
+
+* 🖥️ Desktop Version: `python OptionsAnalyzer.py`
+
 
 # Options Analyzer – Technical documentation
 

